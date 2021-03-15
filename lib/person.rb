@@ -56,9 +56,26 @@ class Person
 
     def call_friend(friend)
         self.happiness += 3
-        friend.self.happiness +=3
+        friend.happiness +=3
         @happiness
+        "Hi " +@name+ "! It's " +friend.name+". How are you?"
+        "Hi " +friend.name+ "! It's " +@name+". How are you?"
     end
 
+    def start_conversation(person,topic)
+        if topic == "politics"
+            self.happiness -= 2
+            person.happiness -= 2
+            @happiness
+            'blah blah partisan blah lobbyist'
+        elsif topic == "weather"
+            self.happiness += 1
+            person.happiness += 1
+            @happiness
+            'blah blah sun blah rain'
+        else 
+            'blah blah blah blah blah'
+        end
+    end
 
 end
